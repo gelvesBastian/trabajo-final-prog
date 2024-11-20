@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Titulo: Gaming-->
+    <h1 style="text-align: center; color:white">Top Gaming</h1>
+ 
+    <!-- Menu -->
+   <!--   <main> -->
+    <section class="videoJuegos1-2">
+        <!-- Tarjeta: Subway Surfer -->
+        <div class="card">
+            <img src="imagenes/subway.webp" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 style="color:white; font-size:2rem ; font-weight: bold" class="card-title">Subway Surfer</h5>
+                <p  style="color:white ; font-size:.7rem" class="card-text">Es un videojuego de plataformas para móviles desarrollado por Kiloo, una empresa privada con sede en Dinamarca y SYBO Games.​ Está disponible para plataformas Microsoft Windows, Android, iOS, Kindle, y Windows Phone. </p>
+                <a href="" class="enlaceVideoJuego1 btn btn-primary">Click para jugar</a>
+            </div>
+        </div>
+        <!-- Tarjeta: Blumgi Slime -->
+        <div class="card">
+            <img src="imagenes/slime.webp" class="card-img-top" alt="No se cargó">
+            <div class="card-body">
+                <h5 style="color:white ; font-size:2rem ;font-weight: bold"  class="card-title">Blumgi Slime</h5>
+                <p style="color:white ; font-size:.7rem" class="card-text">Es un juego de plataformas simple y adictivo que es fácil de aprender y jugar. Con su diseño minimalista y controles intuitivos, cualquiera puede comenzar a jugar de inmediato. Hay 150 niveles para desafiar tus habilidades y mantenerte entretenido durante horas.</p>
+                <a href="#" class="enlaceVideoJuego2 btn btn-primary">Click para jugar</a>
+            </div>
+        </div>
+    </section>
+            
+   <section class="videoJuegos1-2">
+         <div class="card" style="width: 18rem;">
+              <img src="imagenes/minecraft.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 style="color:white ; font-size:2rem ;font-weight: bold" class="card-title">Minecraft</h5>
+                <p style="color:white ; font-size:.7rem" class="card-text">Minecraft es un videojuego de construcción de tipo «mundo abierto» o en inglés sandbox creado originalmente por el sueco Markus Persson, que creó posteriormente Mojang Studios.​​</p>
+                <a href="#" class="enlaceVideoJuego3 btn btn-primary">Click para jugar</a>
+              </div>
+            </div>
+          <div class="card" style="width: 18rem;">
+              <img src="https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/ce4a204b6d2cc99d1879da0b2282b0d8.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 style="color:white ; font-size:2rem ;font-weight: bold" class="card-title">Monkey Mart</h5>
+                <p style="color:white ; font-size:.7rem" class="card-text">Juego de aventuras combina simulación, estrategia y mecánicas de gestión del tiempo para ofrecer una experiencia de juego única. Cultiva varios cultivos como plátanos, piñas y cocos para abastecer los estantes de la tienda.</p>
+                <a href="#" class="enlaceVideoJuego4 btn btn-primary">Click para jugar</a>
+              </div>
+            </div>
+    </section> 
+</body>
+<script src="index.js"></script>
+</html>
+js
+↓
+//Obtengo el elemento a, para poder acceder a los atributos
+let enlaceVideoJuego1 = document.querySelector ('.enlaceVideoJuego1')
+//Utilizo el elemento a y el evento onClick para que al presionar boton, te redirija a la página del juego mediante el href.
+enlaceVideoJuego1.onclick = function(){
+    let prompt = prompt("Estás seguro de ir a este sitio? Si seleccionas que si te redirigue a la página del juego, sino a la página principal");
+    if(prompt){
+        enlaceVideoJuego1.href = "https://poki.com/es/g/subway-surfers"
+    } else {
+        enlaceVideoJuego1.href = "https://poki.com/es/"
+    }
+    
+}
+
+//Obtengo el elemento a, para poder acceder a los atributos
+let enlaceVideoJuego2 = document.querySelector('.enlaceVideoJuego2')
+//Utilizo el elemento a y el evento onClick para que al presionar boton, te redirija a la página del juego mediante el href.
+enlaceVideoJuego2.onclick = function(){
+    enlaceVideoJuego2.href = "https://poki.com/es/g/blumgi-slime"
+}
+
+//Obtengo el elemento a, para poder acceder a los atributos
+let enlaceVideoJuego3 = document.querySelector('.enlaceVideoJuego3')
+//Utilizo el elemento a y el evento onClick para que al presionar boton, te redirija a la página del juego mediante el href.
+enlaceVideoJuego3.onclick = function(){
+    enlaceVideoJuego3.href = "https://poki.com/es/g/vectaria-io" 
+}
+
+
+//Obtengo el elemento a, para poder acceder a los atributos
+let enlaceVideoJuego4 = document.querySelector('.enlaceVideoJuego4')
+//Utilizo el elemento a y el evento onClick para que al presionar boton, te redirija a la página del juego mediante el href.
+enlaceVideoJuego4.onclick = function(){
+    enlaceVideoJuego4.href = "https://poki.com/es/g/monkey-mart"
+}
+css
+↓
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-image: url('imagenes/fondonegro.webp');
+}
+
+.videoJuegos1-2 {
+    display: flex;           /* Usa Flexbox para alinear los elementos */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center;     /* Centra los elementos verticalmente */
+    gap: 20px;               /* Espacio de 20px entre los elementos */
+    flex-wrap: wrap;         /* Permite que los elementos se envuelvan en múltiples líneas si es necesario */
+    padding: 20px;           /* Espaciado interno de la sección */
+}
+
+.videoJuegos1-2 .card {
+    width: 18rem;            /* Ancho fijo de las tarjetas */
+    border: 1px solid #ccc;  /* Bordes ligeros */
+    border-radius: 10px;     /* Bordes redondeados */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* Ajustes para imágenes dentro de las tarjetas */
+.videoJuegos1-2 .card img {
+    width: 100%;              /* Las imágenes ocuparán todo el ancho de la tarjeta */
+    height: 100%;             /* Mantener la relación de aspecto */
+    border-bottom: 1px solid #eee; /* Línea divisoria debajo de la imagen */
+}
+
+.card{
+    text-align: center;
+}
