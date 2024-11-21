@@ -1,0 +1,42 @@
+css
+↓
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-image: url('imagenes/fondonegro.webp');
+}
+
+.videoJuegos1-2 {
+    display: flex;           /* Usa Flexbox para alinear los elementos */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center;     /* Centra los elementos verticalmente */
+    gap: 20px;               /* Espacio de 20px entre los elementos */
+    flex-wrap: wrap;         /* Permite que los elementos se envuelvan en múltiples líneas si es necesario */
+    padding: 20px;           /* Espaciado interno de la sección */
+}
+
+.videoJuegos1-2 .card {
+    width: 18rem;            /* Ancho fijo de las tarjetas */
+    border: 1px solid #ccc;  /* Bordes ligeros */
+    border-radius: 10px;     /* Bordes redondeados */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* Ajustes para imágenes dentro de las tarjetas */
+.videoJuegos1-2 .card img {
+    width: 100%;              /* Las imágenes ocuparán todo el ancho de la tarjeta */
+    height: 100%;             /* Mantener la relación de aspecto */
+    border-bottom: 1px solid #eee; /* Línea divisoria debajo de la imagen */
+}
+
+.card{
+    text-align: center;
+}
